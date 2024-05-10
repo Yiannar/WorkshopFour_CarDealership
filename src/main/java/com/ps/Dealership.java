@@ -8,11 +8,11 @@ public class Dealership {
     private String phone;
 
 
-
-    public Dealership(String name, String address, String phone) {
+    public Dealership(String name, String address, String phone, ArrayList<Vehicle> inventory) {
         this.name = name;
         this.address = address;
         this.phone = phone;
+        this.inventory = inventory;
     }
 
     public String getName() {
