@@ -12,6 +12,7 @@ public class UserInterface {
 
         int mainMenuCommand;
         do {
+            System.out.println("\n Please choose from the following options:\n");
             System.out.println("1) Display vehicles by price");
             System.out.println("2) Display vehicles by make and model");
             System.out.println("3) Display vehicles by year");
@@ -217,9 +218,29 @@ public class UserInterface {
 
 
 
-    private static void displayVehicles(ArrayList<Vehicle> vehicles) {
+    public static void displayVehicles(ArrayList<Vehicle> vehicles) {
+        // Define column widths for each attribute
+        int vinWidth = 8;
+        int yearWidth = 6;
+        int makeWidth = 12;
+        int modelWidth = 12;
+        int typeWidth = 10;
+        int colorWidth = 8;
+        int odometerWidth = 10;
+        int priceWidth = 10;
+
+        // Header row
+        System.out.printf("%-" + vinWidth + "s | %-" + yearWidth + "s | %-" + makeWidth + "s | %-" + modelWidth + "s | %-" + typeWidth + "s | %-" + colorWidth + "s | %-" + odometerWidth + "s | %-" + priceWidth + "s%n",
+                "VIN", "Year", "Make", "Model", "Type", "Color", "Odometer", "Price");
+
+        // Separator row
+        System.out.println("-".repeat(vinWidth + yearWidth + makeWidth + modelWidth + typeWidth + colorWidth + odometerWidth + priceWidth + 7 * 2));
+
+        // Data rows
         for (Vehicle vehicle : vehicles) {
-            System.out.println(vehicle);
+            System.out.printf("%-" + vinWidth + "d | %-" + yearWidth + "d | %-" + makeWidth + "s | %-" + modelWidth + "s | %-" + typeWidth + "s | %-" + colorWidth + "s | %-" + odometerWidth + "d | %-" + priceWidth + ".2f%n",
+                    vehicle.getVin(), vehicle.getYcar(), vehicle.getMake(), vehicle.getModel(), vehicle.getVehicleType(), vehicle.getColor(), vehicle.getOdometer(), vehicle.getPrice());
         }
     }
+
 }
