@@ -230,7 +230,15 @@ public class UserInterface {
         int priceWidth = 10;
 
         // Header row
-        System.out.printf("%-" + vinWidth + "s | %-" + yearWidth + "s | %-" + makeWidth + "s | %-" + modelWidth + "s | %-" + typeWidth + "s | %-" + colorWidth + "s | %-" + odometerWidth + "s | %-" + priceWidth + "s%n",
+        System.out.printf("%-" + vinWidth +
+                        "s | %-" + yearWidth +
+                        "s | %-" + makeWidth +
+                        "s | %-" + modelWidth +
+                        "s | %-" + typeWidth +
+                        "s | %-" + colorWidth +
+                        "s | %-" + odometerWidth +
+                        "s | %-" + priceWidth +
+                        "s%n",
                 "VIN", "Year", "Make", "Model", "Type", "Color", "Odometer", "Price");
 
         // Separator row
@@ -238,8 +246,23 @@ public class UserInterface {
 
         // Data rows
         for (Vehicle vehicle : vehicles) {
-            System.out.printf("%-" + vinWidth + "d | %-" + yearWidth + "d | %-" + makeWidth + "s | %-" + modelWidth + "s | %-" + typeWidth + "s | %-" + colorWidth + "s | %-" + odometerWidth + "d | %-" + priceWidth + ".2f%n",
-                    vehicle.getVin(), vehicle.getYcar(), vehicle.getMake(), vehicle.getModel(), vehicle.getVehicleType(), vehicle.getColor(), vehicle.getOdometer(), vehicle.getPrice());
+            System.out.printf("%-" + vinWidth +
+                            "d | %-" + yearWidth +
+                            "d | %-" + makeWidth +
+                            "s | %-" + modelWidth +
+                            "s | %-" + typeWidth +
+                            "s | %-" + colorWidth +
+                            "s | %-" + odometerWidth +
+                            "d | %-" + priceWidth +
+                            ".2f%n",
+                    vehicle.getVin(),
+                    vehicle.getYcar(),
+                    vehicle.getMake(),
+                    vehicle.getModel(),
+                    vehicle.getVehicleType(),
+                    vehicle.getColor(),
+                    vehicle.getOdometer(),
+                    vehicle.getPrice());
         }
     }
 
