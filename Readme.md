@@ -16,7 +16,10 @@
 
 // Using Scanner to take an initial user menu command
 
-// First welcoming the user to D & B used car dealership, second the user is prompted to the menu and to select from the options and to exit the program.
+// First welcoming the user to D & B used car dealership,
+
+// Second the user is prompted to the menu and to select from the options 
+// Third the user is given an option to exit the program.
 
 // After the prompt the user can select options 1-10 depending on what they are looking for 
 
